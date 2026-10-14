@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <link rel="shortcut icon" href="@@favicon.svg" type="image/svg+xml">
+   <link rel="shortcut icon" href="@@favicon.webp" type="image/webp">
+   <link rel="shortcut icon" href="@@favicon.png" type="image/x-icon">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <title>New project</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header"></header>
+
+      <main class="main">
+         <section class="checkout-page">
+            <div class="checkout-page__wrapper">
+               <div class="checkout-page__main checkout-main">
+                  <div class="checkout-main__block checkout-auth">
+                     <h2 class="checkout-title">Войдите или зарегистрируйтесь</h2>
+                     <p class="checkout-text">Чтобы заполнять меньше информации при заказе и
+                        копить баллы</p>
+                     <div class="ui-input">
+                        <input type="text" placeholder="+7" data-phone>
+                     </div>
+                     <button class="ui-button">Войти</button>
+                     <div class="checkout-link">Войти по почте</div>
+                  </div>
+                  <div class="checkout-main__block checkout-delivery">
+                     <h2 class="checkout-title">Способ доставки</h2>
+                     <div class="checkout-delivery__header">
+                        <span class="checkout-subtitle">Ваш город Москва?</span>
+                        <button class="checkout-link">Изменить</button>
+                     </div>
+                     <div class="checkout-text">
+                        <p>От выбора региона зависят доступные способы оплаты и получения заказа.</p>
+                        <p>Срок и стоимость доставки рассчитывается после выбора адреса или пункта самовывоза</p>
+                     </div>
+                     <ul class="checkout-delivery__items">
+                        <li class="delivery-item">
+                           <div class="delivery-item__header">
+                              <img src="img/sdek.svg" alt="delivery">
+                              <h4 class="checkout-title">сдэк</h4>
+                           </div>
+                           <ul class="delivery-item__options">
+                              <li class="delivery-item__option">
+                                 <label>
+                                    <input type="radio" name="delivery">
+                                    <div class="circle">
+                                       <div class="circle"></div>
+                                    </div>
+                                    <p class="delivery-item__info">
+                                       <span class="checkout-subtitle">Доставка курьером до двери</span>
+                                       <span class="delivery-item__date checkout-text">1–3 рабочих дня</span>
+                                    </p>
+                                    <span class="delivery-item__price checkout-subtitle">499 ₽ </span>
+
+                                 </label>
+                              </li>
+                              <li class="delivery-item__option">
+                                 <label>
+                                    <input type="radio" name="delivery">
+                                    <div class="circle">
+                                       <div class="circle"></div>
+                                    </div>
+                                    <p class="delivery-item__info">
+                                       <span class="checkout-subtitle">Доставка до пункта выдачи</span>
+                                       <span class="delivery-item__date checkout-text">1–3 рабочих дня</span>
+                                    </p>
+                                    <span class="delivery-item__price checkout-subtitle">499 ₽ </span>
+
+                                 </label>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="delivery-item">
+                           <div class="delivery-item__header">
+                              <img src="img/YandexMarket.svg" alt="delivery">
+                              <h4 class="checkout-title">Яндекс.Доставка</h4>
+                           </div>
+                           <ul class="delivery-item__options">
+                              <li class="delivery-item__option">
+                                 <label>
+                                    <input type="radio" name="delivery">
+                                    <div class="circle">
+                                       <div class="circle"></div>
+                                    </div>
+                                    <p class="delivery-item__info">
+                                       <span class="checkout-subtitle">Доставка курьером до двери</span>
+                                       <span class="delivery-item__date checkout-text">1–3 рабочих дня</span>
+                                    </p>
+                                    <span class="delivery-item__price checkout-subtitle">499 ₽ </span>
+
+                                 </label>
+                              </li>
+                              <li class="delivery-item__option">
+                                 <label>
+                                    <input type="radio" name="delivery">
+                                    <div class="circle">
+                                       <div class="circle"></div>
+                                    </div>
+                                    <p class="delivery-item__info">
+                                       <span class="checkout-subtitle">Доставка до пункта выдачи</span>
+                                       <span class="delivery-item__date checkout-text">1–3 рабочих дня</span>
+                                    </p>
+                                    <span class="delivery-item__price checkout-subtitle">499 ₽ </span>
+
+                                 </label>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="delivery-item">
+                           <div class="delivery-item__header">
+                              <img src="img/Fable.svg" alt="delivery">
+                              <h4 class="checkout-title">Самовывоз из магазина</h4>
+                           </div>
+                           <ul class="delivery-item__options">
+                              <li class="delivery-item__option">
+                                 <label>
+                                    <input type="radio" name="delivery">
+                                    <div class="circle">
+                                       <div class="circle"></div>
+                                    </div>
+                                    <p class="delivery-item__info">
+                                       <span class="checkout-subtitle">Забрать можно: 17 сентября, на ул.
+                                          Новодмитровская, 36 Стр. 2, 3 этаж </span>
+                                       <span class="delivery-item__date checkout-text">1–3 рабочих дня</span>
+                                    </p>
+                                    <span class="delivery-item__price checkout-subtitle">Бесплатно</span>
+
+                                 </label>
+                              </li>
+
+                           </ul>
+                        </li>
+                     </ul>
+
+                  </div>
+                  <div class="checkout-main__block checkout-payment">
+                     <h2 class="checkout-title">Оплата</h2>
+                     <ul class="checkout-payment__items">
+                        <li class="payment-item">
+                           <label class="payment-item__header">
+                              <input type="radio" name="payment">
+                              <div class="payment-item__heading">
+                                 <div class="circle">
+                                    <div class="circle"></div>
+                                 </div>
+                                 <h4 class="checkout-subtitle">Картой на сайте</h4>
+                                 <p class="checkout-text">Данные карты надёжно зашифрованы и не хранятся на нашем сайте
+                                 </p>
+                              </div>
+                              <ul class="payment-item__visual">
+                                 <li>
+                                    <img src="img/mastercard.svg" alt="">
+                                 </li>
+                                 <li>
+                                    <img src="img/mir.svg" alt="">
+                                 </li>
+                                 <li>
+                                    <img src="img/visa.svg" alt="">
+                                 </li>
+                              </ul>
+                           </label>
+                           <div class="payment-item__main"></div>
+                        </li>
+                        <li class="payment-item">
+                           <label class="payment-item__header">
+                              <input type="radio" name="payment">
+                              <div class="payment-item__heading">
+                                 <div class="circle">
+                                    <div class="circle"></div>
+                                 </div>
+                                 <h4 class="checkout-subtitle">СБП</h4>
+                                 <p class="checkout-text">Быстро и без комиссий. Отсканируйте QR-код с помощью
+                                    мобильного приложения своего банка</p>
+                              </div>
+                              <ul class="payment-item__visual">
+                                 <li>
+                                    <img src="img/sbp-logo.svg" alt="">
+                                 </li>
+                              </ul>
+                           </label>
+                           <div class="payment-item__main"></div>
+                        </li>
+                        <li class="payment-item">
+                           <label class="payment-item__header">
+                              <input type="radio" name="payment">
+                              <div class="payment-item__heading">
+                                 <div class="circle">
+                                    <div class="circle"></div>
+                                 </div>
+                                 <h4 class="checkout-subtitle">Яндекс Сплит - 6 платежей по 3 072 Р</h4>
+
+                              </div>
+                              <ul class="payment-item__visual">
+                                 <li>
+                                    <img src="img/yandex-split-logo.svg" alt="">
+                                 </li>
+
+                              </ul>
+                           </label>
+                           <div class="payment-item__main"></div>
+                        </li>
+                        <li class="payment-item">
+                           <label class="payment-item__header">
+                              <input type="radio" name="payment">
+                              <div class="payment-item__heading">
+                                 <div class="circle">
+                                    <div class="circle"></div>
+                                 </div>
+                                 <h4 class="checkout-subtitle">Долями - 4 платежа по 4 608 Р</h4>
+                              </div>
+                              <ul class="payment-item__visual">
+                                 <li>
+                                    <img src="img/dolyami.svg" alt="">
+                                 </li>
+                              </ul>
+                           </label>
+                           <div class="payment-item__main"></div>
+                        </li>
+                        <li class="payment-item">
+                           <label class="payment-item__header">
+                              <input type="radio" name="payment">
+                              <div class="payment-item__heading">
+                                 <div class="circle">
+                                    <div class="circle"></div>
+                                 </div>
+                                 <h4 class="checkout-subtitle">Подели - 4 платежа по 4 608 Р</h4>
+
+                              </div>
+                              <ul class="payment-item__visual">
+                                 <li>
+                                    <img src="img/podeli.svg" alt="">
+                                 </li>
+                              </ul>
+                           </label>
+                           <div class="payment-item__main"></div>
+                        </li>
+                        <li class="payment-item">
+                           <label class="payment-item__header">
+                              <input type="radio" name="payment">
+                              <div class="payment-item__heading">
+                                 <div class="circle">
+                                    <div class="circle"></div>
+                                 </div>
+                                 <h4 class="checkout-subtitle">Оплата по ссылке после звонка оператора</h4>
+
+                              </div>
+
+                           </label>
+                           <div class="payment-item__main"></div>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="checkout-page__aside">
+                  <div class="checkout-page__sticky">
+                     <div class="checkout-page__sidebar checkout-sidebar">
+                        <ul class="checkout-sidebar__items">
+                           <li class="checkout-sidebar__item checkout-product">
+                              <div class="checkout-product__image square">
+                                 <img src="img/item1.webp" alt="">
+                              </div>
+                              <div class="checkout-product__main">
+                                 <h6 class="checkout-product__title checkout-subtitle">Брюки из канваса</h6>
+                                 <span class="checkout-text">Размер: S</span>
+                                 <span class="checkout-text">1 шт.</span>
+                              </div>
+                              <div class="checkout-product__price checkout-subtitle">
+                                 <span class="old">17 900 ₽</span>
+                                 <span>15 900 ₽</span>
+                              </div>
+                           </li>
+                           <li class="checkout-sidebar__item checkout-product">
+                              <div class="checkout-product__image square">
+                                 <img src="img/item2.webp" alt="">
+                              </div>
+                              <div class="checkout-product__main">
+                                 <h6 class="checkout-product__title checkout-subtitle">Кепка</h6>
+                                 <span class="checkout-text">Размер: универсальный</span>
+                                 <span class="checkout-text">1 шт.</span>
+                              </div>
+                              <div class="checkout-product__price checkout-subtitle">
+                                 <span>3 900 ₽</span>
+                              </div>
+                           </li>
+                        </ul>
+                        <div class="checkout-sidebar__promo">
+                           <div class="ui-input">
+                              <input type="text" placeholder="Промокод или сертификат">
+                           </div>
+                           <button class="ui-button grey">Применить</button>
+                        </div>
+                        <div class="checkout-sidebar__points">
+                           <img src="img/sidebar-logo.svg" alt="">
+                           <p class="checkout-text">
+                              У вас 1 090 баллов, вы можете оплатить ими до 30% стоимости товаров. <a
+                                 class="checkout-link">Списать</a>
+                           </p>
+                        </div>
+                        <div class="checkout-sidebar__info">
+                           <ul>
+                              <li class="checkout-subtitle">
+                                 <span>Сумма покупки</span><span>21 800 ₽</span>
+                              </li>
+                              <li class="checkout-subtitle">
+                                 <span>Скидка F | ABLE</span><span style="color: #AE0303;">− 2 000 ₽</span>
+                              </li>
+                              <li class="checkout-subtitle">
+                                 <span>Доставка</span><span>Бесплатно</span>
+                              </li>
+                              <li class="checkout-title">
+                                 <span>Итого</span><span>19 800 ₽</span>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="checkout-sidebar__form">
+                           <label class="checkout-checkbox">
+                              <input type="checkbox">
+                              <div class="square"></div>
+                              <p class="checkout-text">Я согласен с <a href="#" class="checkout-link">условиями
+                                    интернет-магазина F | ABLE</a></p>
+                           </label>
+                           <button class="ui-button">Оплатить заказ</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer"></footer>
+
+
+   </div>
+   <script src="https://unpkg.com/imask"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
