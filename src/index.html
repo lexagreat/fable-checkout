@@ -10,6 +10,64 @@
    <div class="wrapper">
       @@include('components/_header.html')
       <main class="main">
+         <modal class="modal city-modal open" id="city-modal">
+            <div class="modal__content city-modal__content scrollbar-none">
+               <div class="city-modal__header">
+                  <div class="city-modal__title">Выберите город</div>
+                  <button class="city-modal__close modal__close">(закрыть)</button>
+               </div>
+               <div class="city-modal__main">
+                  <div class="ui-input city-modal__input">
+                     <img src="img/search.svg" alt="">
+                     <input type="text" placeholder="Введите название города">
+                  </div>
+                  <span class="city-modal__remind">От выбора города зависят доступные службы доставки, сроки и
+                     стоимость</span>
+                  <ul class="city-modal__list">
+                     <li class="checked">
+                        <span>Москва</span>
+                        <span>Определён автоматически</span>
+                     </li>
+                     <li>
+                        <span>Санкт-Петербург</span>
+                     </li>
+                     <li>
+                        <span>Новосибирск</span>
+                     </li>
+                     <li>
+                        <span>Екатеринбург</span>
+                     </li>
+                     <li>
+                        <span>Санкт-Петербург</span>
+                     </li>
+                     <li>
+                        <span>Новосибирск</span>
+                     </li>
+                     <li>
+                        <span>Екатеринбург</span>
+                     </li>
+                     <li>
+                        <span>Санкт-Петербург</span>
+                     </li>
+                     <li>
+                        <span>Новосибирск</span>
+                     </li>
+                     <li>
+                        <span>Екатеринбург</span>
+                     </li>
+                     <li>
+                        <span>Санкт-Петербург</span>
+                     </li>
+                     <li>
+                        <span>Новосибирск</span>
+                     </li>
+                     <li>
+                        <span>Екатеринбург</span>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </modal>
          <section class="checkout-page">
             <div class="checkout-page__wrapper">
                <div class="checkout-page__main checkout-main">
@@ -23,11 +81,26 @@
                      <button class="ui-button">Войти</button>
                      <div class="checkout-link">Войти по почте</div>
                   </div>
+                  <div class="checkout-main__block checkout-user">
+                     <h2 class="checkout-title">Получатель</h2>
+                     <div class="checkout-user__wrapper">
+                        <div class="checkout-user__main">
+                           <span class="checkout-user__name">Анна Смирнова
+                           </span>
+                           <span class="checkout-user__info">+7 (999) 123-45-67</span>
+                           <span class="checkout-user__info">anna.smirnova@mail.ru</span>
+                        </div>
+                        <div class="checkout-user__exit">
+                           <span class="checkout-user__info">Это не вы? </span>
+                           <a href="#" class="checkout-link">Выйти</a>
+                        </div>
+                     </div>
+                  </div>
                   <div class="checkout-main__block checkout-delivery">
                      <h2 class="checkout-title">Способ доставки</h2>
                      <div class="checkout-delivery__header">
                         <span class="checkout-subtitle">Ваш город Москва?</span>
-                        <button class="checkout-link">Изменить</button>
+                        <button href="#city-modal" class="checkout-link modal__link">Изменить</button>
                      </div>
                      <div class="checkout-text">
                         <p>От выбора региона зависят доступные способы оплаты и получения заказа.</p>
@@ -46,10 +119,37 @@
                                     <div class="circle">
                                        <div class="circle"></div>
                                     </div>
-                                    <p class="delivery-item__info">
+                                    <div class="delivery-item__info">
                                        <span class="checkout-subtitle">Доставка курьером до двери</span>
                                        <span class="delivery-item__date checkout-text">1–3 рабочих дня</span>
-                                    </p>
+
+                                       <div class="delivery-item__hidden">
+                                          <div class="delivery-courier">
+                                             <div class="address-autocomplete" data-address-autocomplete>
+                                                <div class="ui-input">
+                                                   <input id="delivery-address1" type="text"
+                                                      placeholder="Введите адрес доставки" autocomplete="off"
+                                                      role="combobox" aria-expanded="false"
+                                                      aria-controls="delivery-address1-list" aria-autocomplete="list">
+                                                </div>
+                                                <div class="address-autocomplete__dropdown" id="delivery-address1-list"
+                                                   role="listbox" hidden></div>
+                                             </div>
+                                             <div class="ui-input">
+                                                <input type="text" placeholder="Квартира">
+                                             </div>
+                                             <div class="ui-input">
+                                                <input type="text" placeholder="Этаж">
+                                             </div>
+                                             <div class="ui-input">
+                                                <input type="text" placeholder="Домофон">
+                                             </div>
+                                             <div class="ui-input">
+                                                <input type="text" placeholder="Комментарий">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
                                     <span class="delivery-item__price checkout-subtitle">499 ₽ </span>
 
                                  </label>
@@ -60,10 +160,22 @@
                                     <div class="circle">
                                        <div class="circle"></div>
                                     </div>
-                                    <p class="delivery-item__info">
+                                    <div class="delivery-item__info">
                                        <span class="checkout-subtitle">Доставка до пункта выдачи</span>
                                        <span class="delivery-item__date checkout-text">1–3 рабочих дня</span>
-                                    </p>
+                                       <div class="delivery-item__hidden">
+                                          <div class="delivery-pickup">
+                                             <div class="checkout-text">
+                                                <p>ПВЗ, Москва, Гагаринский переулок, 5 стр1</p>
+                                                <p>пн - вс: 10:00-22:00</p>
+                                                <p>Срок доставки: от 3 дней</p>
+                                                <p>Стоимость доставки: 150 руб</p>
+
+                                             </div>
+                                             <a href="#" class="checkout-link">Изменить</a>
+                                          </div>
+                                       </div>
+                                    </div>
                                     <span class="delivery-item__price checkout-subtitle">499 ₽ </span>
 
                                  </label>
@@ -82,10 +194,37 @@
                                     <div class="circle">
                                        <div class="circle"></div>
                                     </div>
-                                    <p class="delivery-item__info">
+                                    <div class="delivery-item__info">
                                        <span class="checkout-subtitle">Доставка курьером до двери</span>
                                        <span class="delivery-item__date checkout-text">1–3 рабочих дня</span>
-                                    </p>
+
+                                       <div class="delivery-item__hidden">
+                                          <div class="delivery-courier">
+                                             <div class="address-autocomplete" data-address-autocomplete>
+                                                <div class="ui-input">
+                                                   <input id="delivery-address2" type="text"
+                                                      placeholder="Введите адрес доставки" autocomplete="off"
+                                                      role="combobox" aria-expanded="false"
+                                                      aria-controls="delivery-address2-list" aria-autocomplete="list">
+                                                </div>
+                                                <div class="address-autocomplete__dropdown" id="delivery-address2-list"
+                                                   role="listbox" hidden></div>
+                                             </div>
+                                             <div class="ui-input">
+                                                <input type="text" placeholder="Квартира">
+                                             </div>
+                                             <div class="ui-input">
+                                                <input type="text" placeholder="Этаж">
+                                             </div>
+                                             <div class="ui-input">
+                                                <input type="text" placeholder="Домофон">
+                                             </div>
+                                             <div class="ui-input">
+                                                <input type="text" placeholder="Комментарий">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
                                     <span class="delivery-item__price checkout-subtitle">499 ₽ </span>
 
                                  </label>
@@ -96,10 +235,22 @@
                                     <div class="circle">
                                        <div class="circle"></div>
                                     </div>
-                                    <p class="delivery-item__info">
+                                    <div class="delivery-item__info">
                                        <span class="checkout-subtitle">Доставка до пункта выдачи</span>
                                        <span class="delivery-item__date checkout-text">1–3 рабочих дня</span>
-                                    </p>
+                                       <div class="delivery-item__hidden">
+                                          <div class="delivery-pickup">
+                                             <div class="checkout-text">
+                                                <p>ПВЗ, Москва, Гагаринский переулок, 5 стр1</p>
+                                                <p>пн - вс: 10:00-22:00</p>
+                                                <p>Срок доставки: от 3 дней</p>
+                                                <p>Стоимость доставки: 150 руб</p>
+
+                                             </div>
+                                             <a href="#" class="checkout-link">Изменить</a>
+                                          </div>
+                                       </div>
+                                    </div>
                                     <span class="delivery-item__price checkout-subtitle">499 ₽ </span>
 
                                  </label>
@@ -331,6 +482,186 @@
 
    </div>
    @@include('components/_scripts.html')
+
+   <script>
+      const ADDRESS_SUGGESTIONS = [
+         "Москва",
+         "Московская область",
+         "Московский проспект, 12, Санкт-Петербург",
+         "ул. Московская, 45, Казань",
+         "г. Москва, ул. Тверская, 7",
+         "Московский пос., Ленинградская обл.",
+         "Московское шоссе, 18, Ростов-на-Дону",
+         "Москва, Кутузовский проспект, 32",
+         "пос. Московский, Московская обл.",
+         "Московская улица, 3, Екатеринбург",
+      ];
+
+      function escapeHtml(str) {
+         return str
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+      }
+
+      function highlightAddress(text, query) {
+         const normalizedText = text.toLowerCase();
+         const normalizedQuery = query.toLowerCase();
+         const index = normalizedText.indexOf(normalizedQuery);
+
+         if (!query || index === -1) {
+            return `<span class="address-autocomplete__match">${escapeHtml(text)}</span>`;
+         }
+
+         const before = text.slice(0, index);
+         const match = text.slice(index, index + query.length);
+         const after = text.slice(index + query.length);
+
+         return `${escapeHtml(before)}<span class="address-autocomplete__match">${escapeHtml(match)}</span>${escapeHtml(after)}`;
+      }
+
+      function filterAddresses(query) {
+         const trimmed = query.trim();
+         if (!trimmed) {
+            return ADDRESS_SUGGESTIONS.slice();
+         }
+         return ADDRESS_SUGGESTIONS.filter((item) =>
+            item.toLowerCase().includes(trimmed.toLowerCase())
+         );
+      }
+
+      function initAddressAutocomplete(root) {
+         const input = root.querySelector("input");
+         const dropdown = root.querySelector(".address-autocomplete__dropdown");
+         if (!input || !dropdown) {
+            return;
+         }
+
+         let activeIndex = -1;
+
+         const closeDropdown = () => {
+            dropdown.hidden = true;
+            input.setAttribute("aria-expanded", "false");
+            activeIndex = -1;
+         };
+
+         const render = (items, query) => {
+            dropdown.innerHTML = "";
+
+            if (!items.length) {
+               closeDropdown();
+               return;
+            }
+
+            items.forEach((address, index) => {
+               const button = document.createElement("button");
+               button.type = "button";
+               button.className = "address-autocomplete__item";
+               button.role = "option";
+               button.dataset.index = String(index);
+               button.innerHTML = highlightAddress(address, query);
+               button.addEventListener("mousedown", (event) => {
+                  event.preventDefault();
+                  input.value = address;
+                  closeDropdown();
+               });
+               dropdown.appendChild(button);
+            });
+
+            dropdown.hidden = false;
+            input.setAttribute("aria-expanded", "true");
+         };
+
+         const setActiveItem = (index) => {
+            const items = dropdown.querySelectorAll(".address-autocomplete__item");
+            items.forEach((item, i) => {
+               item.classList.toggle("is-active", i === index);
+            });
+            activeIndex = index;
+            const active = items[index];
+            if (active) {
+               active.scrollIntoView({ block: "nearest" });
+            }
+         };
+
+         const openWithCurrentQuery = () => {
+            const query = input.value;
+            const items = filterAddresses(query);
+            render(items, query);
+            if (items.length) {
+               setActiveItem(0);
+            }
+         };
+
+         input.addEventListener("focus", openWithCurrentQuery);
+
+         input.addEventListener("input", () => {
+            const query = input.value;
+            const items = filterAddresses(query);
+            render(items, query);
+            if (items.length) {
+               setActiveItem(0);
+            }
+         });
+
+         input.addEventListener("keydown", (event) => {
+            if (dropdown.hidden) {
+               return;
+            }
+
+            const items = dropdown.querySelectorAll(".address-autocomplete__item");
+            if (!items.length) {
+               return;
+            }
+
+            if (event.key === "ArrowDown") {
+               event.preventDefault();
+               const next = activeIndex < items.length - 1 ? activeIndex + 1 : 0;
+               setActiveItem(next);
+            } else if (event.key === "ArrowUp") {
+               event.preventDefault();
+               const prev = activeIndex > 0 ? activeIndex - 1 : items.length - 1;
+               setActiveItem(prev);
+            } else if (event.key === "Enter") {
+               if (activeIndex >= 0 && items[activeIndex]) {
+                  event.preventDefault();
+                  const query = input.value;
+                  const filtered = filterAddresses(query);
+                  input.value = filtered[activeIndex] ?? input.value;
+                  closeDropdown();
+               }
+            } else if (event.key === "Escape") {
+               closeDropdown();
+            }
+         });
+
+         input.addEventListener("blur", () => {
+            window.setTimeout(closeDropdown, 150);
+         });
+
+         document.addEventListener("click", (event) => {
+            if (!root.contains(event.target)) {
+               closeDropdown();
+            }
+         });
+      }
+
+      document.querySelectorAll("[data-address-autocomplete]").forEach(initAddressAutocomplete);
+
+   </script>
+   <script>
+      const cityModal = document.querySelector("#city-modal");
+      const cityModalListItems = cityModal.querySelectorAll(".city-modal__list li");
+      cityModalListItems.forEach(i => {
+         i.addEventListener("click", () => {
+            cityModalListItems.forEach(j => {
+               j.classList.remove("checked");
+            });
+            i.classList.add("checked");
+         });
+      });
+   </script>
 </body>
 
 </html>
